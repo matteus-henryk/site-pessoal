@@ -163,6 +163,11 @@ a:hover {
 
 }
 
+h4 {
+  text-align: center;
+  justify-content: center;
+}
+
 .sobre p {
   text-indent: 1em;
   margin-bottom: 1em;
