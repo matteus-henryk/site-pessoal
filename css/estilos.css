@@ -128,13 +128,13 @@ a:hover {
 .site-title {
   text-align: center;
   font-size: 4em;
-  font-family: 'VT323', monospace;
+  font-family:    'VT323', monospace;
 }
 
 .site-subtitle {
  text-align: center;
  font-style: italic;
- font-family: 'VT323', monospace;
+ font-family:  'VT323', monospace;
  line-height: 1.8em;
  font-size: 2.5em;
 }
@@ -167,7 +167,9 @@ a:hover {
   text-indent: 1em;
   margin-bottom: 1em;
   text-align: justify;
+  font-size: 25px;
 }
+
 
 .sobre a {
   text-decoration: none;
