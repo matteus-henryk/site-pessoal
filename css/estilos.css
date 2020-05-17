@@ -254,6 +254,7 @@ a:hover {
 }
 
 .pontinho {
+  font-size: 65px;
   color: black;
   animation: animacaopontinho 2.5s infinite
 }
