@@ -11,6 +11,7 @@ body {
   font-family: 'VT323', monospace;
   height: 100vh;
   font-size: 12px;
+  text-shadow:  1.5px 1.5px rgba(35, 35, 37, 0.4)
 }
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
@@ -173,6 +174,7 @@ h4 {
   margin-bottom: 1em;
   text-align: justify;
   font-size: 25px;
+ ;
 }
 
 
