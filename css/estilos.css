@@ -1,0 +1,264 @@
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../img/fundo7.png') ;
+  background-size: auto 100vh; 
+  font-family: 'VT323', monospace;
+  height: 100vh;
+  font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background-color: #DFFF0F;
+  box-shadow: 5px 5px 8px black;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+ list-style: none; 
+}
+
+.menu a {
+  
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color , 1s;
+
+}
+
+.menu a:hover {
+  background-color: black;
+  color: #DFFF0F;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+  .titulo {
+    transform: skewY(180deg);
+    opacity: 0;
+    animation: linear 900ms animacaoTitulo infinite;
+    transition: animacaoTitulo 1s;
+  }
+
+    @keyframes animacaoTitulo {
+      100% {
+        transform: skewY(180deg);
+        opacity: 1;
+        animation: linear 900ms animacaoTitulo infinite;
+        
+      }
+    }
+
+.site-subtitle, 
+.site-title {
+  color: whitesmoke;
+  
+}
+
+.site-title {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'VT323', monospace;
+}
+
+.site-subtitle {
+ text-align: center;
+ font-style: italic;
+ font-family: 'VT323', monospace;
+ line-height: 1.8em;
+ font-size: 2.5em;
+}
+.sobre,
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+@media (min-width:1200px) {
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+.sobre h2,
+.portfolio h2 {
+  font-family: 'VT323', monospace;
+  color: rgb(0, 0, 0);
+  margin-bottom: 1.5em;
+  font-size: 2em;
+
+}
+
+.sobre p {
+  text-indent: 1em;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+.sobre a {
+  color: whitesmoke;
+}
+
+.sobre .avatar {
+  float: left;
+  margin-right: 2em;
+}
+
+.sobre .avatar img {
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px black;
+  transition: transform 1.5s;
+}
+
+
+.sobre .avatar img:hover {
+   transform: rotate(360deg);
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 8em;
+  
+}
+
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 10%;
+  transition: transform 500ms;
+  box-shadow:5px 5px 8px black;
+}
+
+.flip-card {
+  perspective:500px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-back {
+  background-color: rgb(145, 255, 0);
+  height: 180px;
+  width: 100%;
+  border-radius: 10%;
+  transform: rotateY(180deg);
+ 
+}
+
+.cont {
+  font-size: 65px;
+  padding: 10px;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 2em;
+  transition: transform 700ms;
+}
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow:0px 0px 5px rgba(255, 238, 0, 0.822);
+  transition: text-shadow 1s;
+}
+
+.contato a:hover {
+  transform: rotateY(360deg);
+}
+
+    .contato .icons {
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+     
+    }
